@@ -47,6 +47,6 @@ public class Konversi
 	
 	public Util help = new Util();
 	public Scanner input = new Scanner(System.in);
-	public Views tampilan = new Views();
+	public static Views tampilan = new Views();
 	public static Controller proses = new Controller();
 }
