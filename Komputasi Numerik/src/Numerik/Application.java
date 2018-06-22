@@ -1,5 +1,7 @@
 package Numerik;
 
+import views.*;
+
 /*
  * @author Muhammad Faturrahman
  * @version 1.0
@@ -8,10 +10,10 @@ package Numerik;
 
 public class Application
 {
-	private static final Process start = new Process();
+	static Views start = new Views();
 	
 	public static void main(String[] args)
 	{
-		start.utama();
+		start.menu.utama();
 	}
 }

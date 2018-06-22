@@ -1,24 +1,15 @@
-package Numerik;
+package views;
 
-import java.io.IOException;
 import java.util.Scanner;
+import controller.*;
+import util.*;
 
-/*
- * @author Muhammad Faturrahman
- * @version 1.0
- * @since 28 May 2018 
- */
-
-public class Process
+public class Menu
 {
-	/***** View *****/
-	
-	// Menu View //
-	
 	public void judul()
-    {
-		this.clearConsole();
-        System.out.println("===================================================");
+	{
+		help.getClearConsole();
+		System.out.println("===================================================");
         System.out.println("=                   Project UAS                   =");
         System.out.println("=            Aplikasi Komputasi Numerik           =");
         System.out.println("=               STMIK Banisaleh 2018              =");
@@ -28,12 +19,12 @@ public class Process
         System.out.println("= NPM   : 43A87006160078                          =");
         System.out.println("= Kelas : S1 / 4B / Malam                         =");
         System.out.println("= Dosen : Taufik Maulana                          =");
-    }
+	}
 	
 	public void utama()
-    {
-        this.judul();
-        System.out.println("===================================================");
+	{
+		this.judul();
+		System.out.println("===================================================");
         System.out.println("=                    Main Menu                    =");
         System.out.println("===================================================");
         System.out.println("= 1. Penjumlahan Bilangan Pecahan                 =");
@@ -45,8 +36,8 @@ public class Process
         System.out.println("= 7. Keluar                                       =");
         System.out.println("===================================================");
         System.out.print("Pilih Menu = ");
-        this.menuProcess(input.nextInt());
-    }
+        proses.menu.utama(input.nextInt());
+	}
 	
 	public void konversi_bilangan()
     {
@@ -65,6 +56,7 @@ public class Process
         System.out.println("= 9. Kembali                                      =");
         System.out.println("===================================================");
         System.out.print("Pilih Menu = ");
+        proses.menu.konversi_bilangan(input.nextInt());
     }
 	
 	public void galat()
@@ -111,91 +103,12 @@ public class Process
         System.out.print("Pilih Menu = ");
     }
     
-    public void menuTurunanFungsi()
+    public void turunan_fungsi()
     {
         
     }
-    
-    // End Menu View //    
 	
-	/***** End View *****/
-	
-    /***** Process Control *****/
-    
-    // Menu Process //
-    
-    private void menuProcess(int menu)
-    {
-    	switch (menu) {
-        case 1:
-            
-            break;
-        case 2:
-            
-            break;
-        case 3:
-            
-            break;
-        case 4:
-            
-            break;
-        case 5:
-            
-            break;
-        case 6:
-            
-            break;
-        case 7:
-            this.clearConsole();
-            System.out.println("Terima Kasih Telah Menggunakan Aplikasi Ini !!!");
-            this.holdConsole();
-            System.exit(0);
-            break;
-        default:
-            this.errorMessage();
-            this.utama();
-            break;
-		}
-    }
-    
-    /***** End Process Control *****/
-    
-	/***** Tools *****/
-	
-	private void clearConsole() 
-	{
-		try {
-            if (System.getProperty("os.name").contains("Windows"))
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-            else
-                Runtime.getRuntime().exec("clear");
-        } catch (IOException | InterruptedException ex) {
-            System.out.println("Error : " + ex.getMessage());
-        }
-	}
-	
-	private void holdConsole() 
-	{
-		try	{
-			System.out.println("\nTekan ENTER untuk melanjutkan...");
-			System.in.read();
-		} catch (IOException ex) {
-			System.out.println("Error : " + ex.getMessage());
-		}
-	}
-	
-	private void errorMessage()
-    {
-        this.clearConsole();
-        System.out.println("Maaf Input Yang Anda Masukkan Salah!!!");
-        this.holdConsole();
-    }
-	
-	/***** End Tools *****/
-	
-	/***** Calling Object *****/
-	
-	private final Scanner input = new Scanner(System.in);
-	
-	/***** End Object *****/
+	public Util help = new Util();
+	public Scanner input = new Scanner(System.in);
+	public static Controller proses = new Controller();
 }
