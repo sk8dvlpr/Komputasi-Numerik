@@ -46,13 +46,13 @@ public class Menu
 			tampilan.konversi.biner();
 			break;
 		case 2:
-			
+			tampilan.konversi.oktal();
 			break;
 		case 3:
-			
+			tampilan.konversi.desimal();
 			break;
 		case 4:
-			
+			tampilan.konversi.hexadesimal();
 			break;
 		case 5:
 			
