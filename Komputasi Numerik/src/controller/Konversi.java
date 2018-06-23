@@ -81,4 +81,44 @@ public class Konversi
 	{
 		return Integer.toHexString(value);
 	}
+	
+	public double fracDesimaltoBiner(double value, int precision)
+    {
+        String binary = ".";
+        int a = (int) value;
+        
+        value = value - a;
+        
+        for (int i = 0; i < precision; ++i)
+        {
+            value *= 2;
+            int fracBit = (int) value;
+            value -= fracBit;
+            binary += String.valueOf(fracBit);
+            
+            if (value == 0) break;
+        }
+        
+        return (Double.parseDouble(Integer.toBinaryString(a)) + Double.parseDouble(binary));
+    }
+	
+	public double fracDesimaltoOktal(double value, int precision)
+    {
+        String binary = ".";
+        int a = (int) value;
+        
+        value = value - a;
+        
+        for (int i = 0; i < precision; ++i)
+        {
+            value *= 8;
+            int fracBit = (int) value;
+            value -= fracBit;
+            binary += String.valueOf(fracBit);
+            
+            if (value == 0) break;
+        }
+        
+        return (Double.parseDouble(Integer.toOctalString(a)) + Double.parseDouble(binary));
+    }
 }
