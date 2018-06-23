@@ -1,4 +1,4 @@
-package Numerik;
+package numerik;
 
 import views.*;
 

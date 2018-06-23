@@ -138,6 +138,26 @@ public class Konversi
         System.out.println("=         Konversi Bilangan Pecahan Biner         =");
         System.out.println("===================================================");
         System.out.print("Masukkan Bilangan Pecahan Biner : ");
+        
+        while (true) {
+            try {
+                double value = input.nextDouble();
+                System.out.println("===================================================");
+                System.out.println("=                      HASIL                      =");
+                System.out.println("===================================================");
+                System.out.println("= Biner       : " + value);
+                System.out.println("= Oktal       : ");
+                System.out.println("= Desimal     : ");
+                System.out.println("= Hexadesimal : ");
+                System.out.println("===================================================");
+                help.getHoldConsole();
+                tampilan.menu.konversi_bilangan();
+            } catch (java.util.InputMismatchException ex) {
+                System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
+                System.out.print("\nMasukkan Bilangan Biner : ");
+                input.nextLine();
+            }
+        }
 	}
 	
 	public void pecahanOktal()
@@ -147,6 +167,26 @@ public class Konversi
         System.out.println("=         Konversi Bilangan Pecahan Oktal         =");
         System.out.println("===================================================");
         System.out.print("Masukkan Bilangan Pecahan Oktal : ");
+        
+        while (true) {
+            try {
+                double value = input.nextDouble();
+                System.out.println("===================================================");
+                System.out.println("=                      HASIL                      =");
+                System.out.println("===================================================");
+                System.out.println("= Biner       : ");
+                System.out.println("= Oktal       : " + value);
+                System.out.println("= Desimal     : ");
+                System.out.println("= Hexadesimal : ");
+                System.out.println("===================================================");
+                help.getHoldConsole();
+                tampilan.menu.konversi_bilangan();
+            } catch (java.util.InputMismatchException ex) {
+                System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
+                System.out.print("\nMasukkan Bilangan Biner : ");
+                input.nextLine();
+            }
+        }
 	}
 	
 	public void pecahanDesimal()
@@ -156,6 +196,7 @@ public class Konversi
         System.out.println("=        Konversi Bilangan Pecahan Desimal        =");
         System.out.println("===================================================");
         System.out.print("Masukkan Bilangan Pecahan Desimal : ");
+        
         while (true) {
             try {
                 double value = input.nextDouble();
@@ -163,12 +204,12 @@ public class Konversi
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
                 System.out.println("= Biner       : " + proses.konversi.fracDesimaltoBiner(value, 7));
-                System.out.println("= Oktal       : " + proses.konversi.fracDesimaltoOktal(value, 3));
+                System.out.println("= Oktal       : " + proses.konversi.fracDesimaltoOktal(value, 7));
                 System.out.println("= Desimal     : " + value);
                 System.out.println("= Hexadesimal : ");
                 System.out.println("===================================================");
                 help.getHoldConsole();
-                tampilan.menu.utama();
+                tampilan.menu.konversi_bilangan();
             } catch (java.util.InputMismatchException ex) {
                 System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
                 System.out.print("\nMasukkan Bilangan Biner : ");
@@ -184,6 +225,26 @@ public class Konversi
         System.out.println("=      Konversi Bilangan Pecahan Hexadesimal      =");
         System.out.println("===================================================");
         System.out.print("Masukkan Bilangan Pecahan Hexa : ");
+        
+        while (true) {
+            try {
+                double value = input.nextDouble();
+                System.out.println("===================================================");
+                System.out.println("=                      HASIL                      =");
+                System.out.println("===================================================");
+                System.out.println("= Biner       : ");
+                System.out.println("= Oktal       : ");
+                System.out.println("= Desimal     : ");
+                System.out.println("= Hexadesimal : " + value);
+                System.out.println("===================================================");
+                help.getHoldConsole();
+                tampilan.menu.konversi_bilangan();
+            } catch (java.util.InputMismatchException ex) {
+                System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
+                System.out.print("\nMasukkan Bilangan Biner : ");
+                input.nextLine();
+            }
+        }
 	}
 	
 	public Util help = new Util();

@@ -55,16 +55,16 @@ public class Menu
 			tampilan.konversi.hexadesimal();
 			break;
 		case 5:
-			
+			tampilan.konversi.pecahanBiner();
 			break;
 		case 6:
-			
+			tampilan.konversi.pecahanOktal();
 			break;
 		case 7:
-			
+			tampilan.konversi.pecahanDesimal();
 			break;
 		case 8:
-			
+			tampilan.konversi.pecahanHexa();
 			break;
 		case 9:
 			tampilan.menu.utama();
