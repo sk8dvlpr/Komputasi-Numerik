@@ -35,7 +35,7 @@ public class Konversi
                 System.out.println("= Hexadesimal : " + proses.konversi.BinertoHexa(value));
                 System.out.println("===================================================");
                 help.getHoldConsole();
-                tampilan.menu.konversi_bilangan();
+                tampilan.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
                 System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
                 System.out.print("\nMasukkan Bilangan Biner : ");
@@ -64,7 +64,7 @@ public class Konversi
                 System.out.println("= Hexadesimal : " + proses.konversi.OktaltoHexa(value));
                 System.out.println("===================================================");
                 help.getHoldConsole();
-                tampilan.menu.konversi_bilangan();
+                tampilan.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
                 System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
                 System.out.print("\nMasukkan Bilangan Biner : ");
@@ -93,7 +93,7 @@ public class Konversi
                 System.out.println("= Hexadesimal : " + proses.konversi.DesimaltoHexa(value));
                 System.out.println("===================================================");
                 help.getHoldConsole();
-                tampilan.menu.konversi_bilangan();
+                tampilan.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
                 System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
                 System.out.print("\nMasukkan Bilangan Biner : ");
@@ -122,7 +122,7 @@ public class Konversi
                 System.out.println("= Hexadesimal : " + proses.konversi.HexatoHexa(value));
                 System.out.println("===================================================");
                 help.getHoldConsole();
-                tampilan.menu.konversi_bilangan();
+                tampilan.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
                 System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
                 System.out.print("\nMasukkan Bilangan Biner : ");
@@ -151,7 +151,7 @@ public class Konversi
                 System.out.println("= Hexadesimal : ");
                 System.out.println("===================================================");
                 help.getHoldConsole();
-                tampilan.menu.konversi_bilangan();
+                tampilan.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
                 System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
                 System.out.print("\nMasukkan Bilangan Biner : ");
@@ -180,7 +180,7 @@ public class Konversi
                 System.out.println("= Hexadesimal : ");
                 System.out.println("===================================================");
                 help.getHoldConsole();
-                tampilan.menu.konversi_bilangan();
+                tampilan.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
                 System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
                 System.out.print("\nMasukkan Bilangan Biner : ");
@@ -209,7 +209,7 @@ public class Konversi
                 System.out.println("= Hexadesimal : ");
                 System.out.println("===================================================");
                 help.getHoldConsole();
-                tampilan.menu.konversi_bilangan();
+                tampilan.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
                 System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
                 System.out.print("\nMasukkan Bilangan Biner : ");
@@ -238,7 +238,7 @@ public class Konversi
                 System.out.println("= Hexadesimal : " + value);
                 System.out.println("===================================================");
                 help.getHoldConsole();
-                tampilan.menu.konversi_bilangan();
+                tampilan.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
                 System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
                 System.out.print("\nMasukkan Bilangan Biner : ");

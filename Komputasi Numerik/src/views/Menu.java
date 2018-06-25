@@ -39,7 +39,7 @@ public class Menu
         proses.menu.utama(input.nextInt());
 	}
 	
-	public void konversi_bilangan()
+	public void konversi()
     {
         this.judul();
         System.out.println("===================================================");
@@ -71,9 +71,10 @@ public class Menu
         System.out.println("= 4. Kembali                                      =");
         System.out.println("===================================================");
         System.out.print("Pilih Menu = ");
+        proses.menu.galat(input.nextInt());
     }
     
-    public void non_linier()
+    public void nonlinier()
     {
         this.judul();
         System.out.println("===================================================");
@@ -87,6 +88,7 @@ public class Menu
         System.out.println("= 6. Kembali                                      =");
         System.out.println("===================================================");
         System.out.print("Pilih Menu = ");
+        proses.menu.nonlinier(input.nextInt());
     }
     
     public void interpolasi()
@@ -103,7 +105,7 @@ public class Menu
         System.out.print("Pilih Menu = ");
     }
     
-    public void turunan_fungsi()
+    public void turunan()
     {
         
     }

@@ -9,16 +9,16 @@ public class Menu
 	{
 		switch (menu) {
 		case 1:
-			
+			tampilan.pecahan.penjumlahanPecahan();
 			break;
 		case 2:
-			tampilan.menu.konversi_bilangan();
+			tampilan.menu.konversi();
 			break;
 		case 3:
-			
+			tampilan.menu.galat();
 			break;
 		case 4:
-			
+			tampilan.menu.nonlinier();
 			break;
 		case 5:
 			
@@ -71,7 +71,57 @@ public class Menu
 			break;
 		default:
 			help.getErrorMessage();
-			tampilan.menu.konversi_bilangan();
+			tampilan.menu.konversi();
+			break;
+		}
+	}
+	
+	public void galat(int menu)
+	{
+		switch (menu) {
+		case 1:
+			tampilan.galat.relatif();
+			break;
+		case 2:
+			tampilan.galat.mutlak();
+			break;
+		case 3:
+			tampilan.galat.penjalaran();
+			break;
+		case 4:
+			tampilan.menu.utama();
+			break;
+		default:
+			help.getErrorMessage();
+			tampilan.menu.galat();
+			break;
+		}
+	}
+	
+	public void nonlinier(int menu)
+	{
+		switch (menu) {
+		case 1:
+			tampilan.metode.titikTetap();
+			break;
+		case 2:
+			tampilan.metode.bagiDua();
+			break;
+		case 3:
+			tampilan.metode.regulaFalsi();
+			break;
+		case 4:
+			tampilan.metode.newtonRaphson();
+			break;
+		case 5:
+			tampilan.metode.scant();
+			break;
+		case 6:
+			tampilan.menu.utama();
+			break;
+		default:
+			help.getErrorMessage();
+			tampilan.menu.nonlinier();
 			break;
 		}
 	}
