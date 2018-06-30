@@ -141,15 +141,16 @@ public class Konversi
         
         while (true) {
             try {
-                double value = input.nextDouble();
+                String value = input.next();
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
                 System.out.println("= Biner       : " + value);
-                System.out.println("= Oktal       : ");
+                System.out.println("= Oktal       : " + proses.konversi.fracBinertoDesimal(value));
                 System.out.println("= Desimal     : ");
                 System.out.println("= Hexadesimal : ");
                 System.out.println("===================================================");
+                
                 help.getHoldConsole();
                 tampilan.menu.konversi();
             } catch (java.util.InputMismatchException ex) {

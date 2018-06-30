@@ -2,8 +2,8 @@ package controller;
 
 public class Nonlinier
 {
-	public void titikTetap()
+	public double titikTetap(double value)
 	{
-		
+		return Math.exp(-(value));
 	}
 }

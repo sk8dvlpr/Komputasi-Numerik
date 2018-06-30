@@ -82,6 +82,39 @@ public class Konversi
 		return Integer.toHexString(value);
 	}
 	
+	public double fracBinertoDesimal(String value) {
+		double sum;
+		
+		if(value.contains(".")) {
+			String[] b = value.split("\\.");
+			
+			int sum1 = Integer.parseInt(b[0], 2);
+			
+			double sum2 = latterPart(b[1]);
+			
+			sum=sum1+sum2;
+		} else {
+			sum = Integer.parseInt(value, 2);
+		}
+		
+		return sum;
+	}
+	
+	public double latterPart(String number) {
+		double sum = 0;
+		int length = number.length();
+		
+		for(int i = 0; i < length; i++) {
+			int e = -i-1;
+			char mult = number.charAt(i);
+			int num = Integer.parseInt(String.valueOf(mult));
+			double num1 = num * Math.pow(2, e);
+			sum = sum + num1;
+		}
+		
+		return sum;
+	}
+	
 	public double fracDesimaltoBiner(double value, int precision)
     {
         String binary = ".";
