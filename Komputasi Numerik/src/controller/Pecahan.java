@@ -12,6 +12,6 @@ public class Pecahan
             System.out.println("Hasil Penjumlahan Ke - " + i + " = " + result);
         }
         
-        System.out.println("\nHasil Penjumlahan " + value + " Sebanyak " + looping + " Kali Adalah : " + result);
+        System.out.println("\nHasil Penjumlahan " + " Sebanyak " + looping + " Kali Adalah : " + result);
     }
 }

@@ -43,25 +43,25 @@ public class Menu
 	{
 		switch (menu) {
 		case 1:
-			tampilan.konversi.biner();
+			tampilan.konversi.binary();
 			break;
 		case 2:
-			tampilan.konversi.oktal();
+			tampilan.konversi.octal();
 			break;
 		case 3:
-			tampilan.konversi.desimal();
+			tampilan.konversi.decimal();
 			break;
 		case 4:
-			tampilan.konversi.hexadesimal();
+			tampilan.konversi.hex();
 			break;
 		case 5:
-			tampilan.konversi.pecahanBiner();
+			tampilan.konversi.fractionBinary();
 			break;
 		case 6:
-			tampilan.konversi.pecahanOktal();
+			tampilan.konversi.fractionOctal();
 			break;
 		case 7:
-			tampilan.konversi.pecahanDesimal();
+			tampilan.konversi.fractionDecimal();
 			break;
 		case 8:
 			tampilan.konversi.pecahanHexa();

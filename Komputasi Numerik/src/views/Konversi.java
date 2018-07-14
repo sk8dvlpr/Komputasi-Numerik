@@ -15,7 +15,7 @@ public class Konversi
         System.out.println("=               STMIK Banisaleh 2018              =");
 	}
 	
-	public void biner()
+	public void binary()
 	{
 		this.judul();
         System.out.println("===================================================");
@@ -25,14 +25,14 @@ public class Konversi
         
         while (true) {
             try {
-                int value = Integer.parseInt(input.nextLine(), 2);
+                String value = input.next();
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
-                System.out.println("= Biner       : " + proses.konversi.BinertoBiner(value));
-                System.out.println("= Oktal       : " + proses.konversi.BinertoOktal(value));
-                System.out.println("= Desimal     : " + proses.konversi.BinertoDesimal(value));
-                System.out.println("= Hexadesimal : " + proses.konversi.BinertoHexa(value));
+                System.out.println("= Biner       : " + value);
+                System.out.println("= Oktal       : " + proses.konversi.getBinarytoOctal(value));
+                System.out.println("= Desimal     : " + proses.konversi.getBinarytoDecimal(value));
+                System.out.print  ("= Hexadesimal : "); proses.konversi.getBinarytoHex(value);
                 System.out.println("===================================================");
                 help.getHoldConsole();
                 tampilan.menu.konversi();
@@ -44,7 +44,7 @@ public class Konversi
         }
 	}
 	
-	public void oktal()
+	public void octal()
 	{
 		this.judul();
         System.out.println("===================================================");
@@ -54,14 +54,14 @@ public class Konversi
         
         while (true) {
             try {
-                int value = Integer.parseInt(input.nextLine(), 8);
+                String value = input.next();
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
-                System.out.println("= Biner       : " + proses.konversi.OktaltoBiner(value));
-                System.out.println("= Oktal       : " + proses.konversi.OktaltoOktal(value));
-                System.out.println("= Desimal     : " + proses.konversi.OktaltoDesimal(value));
-                System.out.println("= Hexadesimal : " + proses.konversi.OktaltoHexa(value));
+                System.out.println("= Biner       : " + proses.konversi.getOctaltoBinary(value));
+                System.out.println("= Oktal       : " + value);
+                System.out.println("= Desimal     : " + proses.konversi.getOctaltoDecimal(value));
+                System.out.print  ("= Hexadesimal : "); proses.konversi.getOctaltoHex(value);
                 System.out.println("===================================================");
                 help.getHoldConsole();
                 tampilan.menu.konversi();
@@ -73,7 +73,7 @@ public class Konversi
         }
 	}
 	
-	public void desimal()
+	public void decimal()
 	{
 		this.judul();
         System.out.println("===================================================");
@@ -83,14 +83,14 @@ public class Konversi
         
         while (true) {
             try {
-                int value = Integer.parseInt(input.nextLine(), 10);
+                String value = input.next();
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
-                System.out.println("= Biner       : " + proses.konversi.DesimaltoBiner(value));
-                System.out.println("= Oktal       : " + proses.konversi.DesimaltoOktal(value));
-                System.out.println("= Desimal     : " + proses.konversi.DesimaltoDesimal(value));
-                System.out.println("= Hexadesimal : " + proses.konversi.DesimaltoHexa(value));
+                System.out.print  ("= Biner       : "); proses.konversi.getDecimaltoBinary(Integer.parseInt(value));
+                System.out.println("\n= Oktal       : " + proses.konversi.getDecimaltoOctal(value));
+                System.out.println("= Desimal     : " + value);
+                System.out.print  ("= Hexadesimal : "); proses.konversi.getDecimaltoHex(value);
                 System.out.println("===================================================");
                 help.getHoldConsole();
                 tampilan.menu.konversi();
@@ -102,7 +102,7 @@ public class Konversi
         }
 	}
 	
-	public void hexadesimal()
+	public void hex()
 	{
 		this.judul();
         System.out.println("===================================================");
@@ -112,14 +112,14 @@ public class Konversi
         
         while (true) {
             try {
-                int value = Integer.parseInt(input.nextLine(), 16);
+                String value = input.next();
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
-                System.out.println("= Biner       : " + proses.konversi.HexatoBiner(value));
-                System.out.println("= Oktal       : " + proses.konversi.HexatoOktal(value));
-                System.out.println("= Desimal     : " + proses.konversi.HexatoDesimal(value));
-                System.out.println("= Hexadesimal : " + proses.konversi.HexatoHexa(value));
+                System.out.print  ("= Biner       : "); proses.konversi.getHextoBinary(value);
+                System.out.println("= Oktal       : " + proses.konversi.getHextoOctal(value));
+                System.out.println("= Desimal     : " + proses.konversi.getHextoDecimal(value));
+                System.out.println("= Hexadesimal : " + value);
                 System.out.println("===================================================");
                 help.getHoldConsole();
                 tampilan.menu.konversi();
@@ -131,7 +131,7 @@ public class Konversi
         }
 	}
 	
-	public void pecahanBiner()
+	public void fractionBinary()
 	{
 		this.judul();
 		System.out.println("===================================================");
@@ -146,9 +146,9 @@ public class Konversi
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
                 System.out.println("= Biner       : " + value);
-                System.out.println("= Oktal       : " + proses.konversi.fracBinertoDesimal(value));
-                System.out.println("= Desimal     : ");
-                System.out.println("= Hexadesimal : ");
+                System.out.println("= Oktal       : " + proses.konversi.getFractionBinarytoOctal(value));
+                System.out.println("= Desimal     : " + proses.konversi.getFractionBinarytoDecimal(value));
+                System.out.print  ("= Hexadesimal : "); proses.konversi.getFractionBinarytoHex(value); 
                 System.out.println("===================================================");
                 
                 help.getHoldConsole();
@@ -161,7 +161,7 @@ public class Konversi
         }
 	}
 	
-	public void pecahanOktal()
+	public void fractionOctal()
 	{
 		this.judul();
 		System.out.println("===================================================");
@@ -171,14 +171,14 @@ public class Konversi
         
         while (true) {
             try {
-                double value = input.nextDouble();
+                String value = input.next();
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
-                System.out.println("= Biner       : ");
+                System.out.println("= Biner       : " + proses.konversi.getFractionOctaltoBinary(value));
                 System.out.println("= Oktal       : " + value);
-                System.out.println("= Desimal     : ");
-                System.out.println("= Hexadesimal : ");
+                System.out.println("= Desimal     : " + proses.konversi.getFractionOctaltoDecimal(value));
+                System.out.print  ("= Hexadesimal : "); proses.konversi.getFractionOctaltoHex(value);
                 System.out.println("===================================================");
                 help.getHoldConsole();
                 tampilan.menu.konversi();
@@ -190,7 +190,7 @@ public class Konversi
         }
 	}
 	
-	public void pecahanDesimal()
+	public void fractionDecimal()
 	{
 		this.judul();
 		System.out.println("===================================================");
@@ -204,10 +204,10 @@ public class Konversi
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
-                System.out.println("= Biner       : " + proses.konversi.fracDesimaltoBiner(value, 7));
-                System.out.println("= Oktal       : " + proses.konversi.fracDesimaltoOktal(value, 7));
+                System.out.println("= Biner       : " + proses.konversi.getFractionDecimaltoBinary(value, 7));
+                System.out.println("= Oktal       : " + proses.konversi.getFractionDecimaltoOctal(value, 7));
                 System.out.println("= Desimal     : " + value);
-                System.out.println("= Hexadesimal : ");
+                System.out.print  ("= Hexadesimal : "); proses.konversi.getFractionDecimaltoHex(String.valueOf(value));
                 System.out.println("===================================================");
                 help.getHoldConsole();
                 tampilan.menu.konversi();
@@ -229,13 +229,13 @@ public class Konversi
         
         while (true) {
             try {
-                double value = input.nextDouble();
+                String value = input.next();
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
-                System.out.println("= Biner       : ");
-                System.out.println("= Oktal       : ");
-                System.out.println("= Desimal     : ");
+                System.out.println("= Biner       : " + proses.konversi.getFractionHextoBinary(value));
+                System.out.println("= Oktal       : " + proses.konversi.getFractionHextoOctal(value));
+                System.out.println("= Desimal     : " + proses.konversi.getFractionHextoDecimal(value));
                 System.out.println("= Hexadesimal : " + value);
                 System.out.println("===================================================");
                 help.getHoldConsole();
