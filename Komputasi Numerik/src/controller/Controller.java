@@ -3,8 +3,11 @@ package controller;
 public class Controller
 {
 	public Menu menu = new Menu();
-	public Konversi konversi = new Konversi();
-	public Pecahan pecahan = new Pecahan();
-	public Galat galat = new Galat();
-	public Nonlinier metode = new Nonlinier();
+	public Konversi convert = new Konversi();
+	public Pecahan fraction = new Pecahan();
+	public Galat error = new Galat();
+	public Nonlinier nonlinier = new Nonlinier();
+	public Interpolasi interpolasi = new Interpolasi();
+	public Turunan turunan = new Turunan();
+	public Integral integral = new Integral();
 }

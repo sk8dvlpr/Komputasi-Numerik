@@ -23,14 +23,14 @@ public class Pecahan
         
         while (true) {
             try {
-                System.out.print("Masukkan Sebuah Bilangan Pecahan : ");
+                System.out.print("= Masukkan Sebuah Bilangan Pecahan : ");
                 value = input.nextDouble();
-                System.out.print("Masukkan Jumlah Penjumlahan      : ");
+                System.out.print("= Masukkan Jumlah Penjumlahan      : ");
                 looping = input.nextInt();
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
-                proses.pecahan.penjumlahanPecahan(value, looping);
+                proses.fraction.penjumlahanPecahan(value, looping);
                 help.getHoldConsole();
                 tampilan.menu.utama();
             } catch (java.util.InputMismatchException ex) {

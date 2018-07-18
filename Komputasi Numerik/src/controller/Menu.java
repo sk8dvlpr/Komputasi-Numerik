@@ -9,24 +9,27 @@ public class Menu
 	{
 		switch (menu) {
 		case 1:
-			tampilan.pecahan.penjumlahanPecahan();
+			views.fraction.penjumlahanPecahan();
 			break;
 		case 2:
-			tampilan.menu.konversi();
+			views.menu.konversi();
 			break;
 		case 3:
-			tampilan.menu.galat();
+			views.menu.galat();
 			break;
 		case 4:
-			tampilan.menu.nonlinier();
+			views.menu.nonlinier();
 			break;
 		case 5:
-			
+			views.menu.interpolasi();
 			break;
 		case 6:
-			
+			views.menu.turunan();
 			break;
 		case 7:
+			views.menu.integral();
+			break;
+		case 8:
 			help.getClearConsole();
 			System.out.println("Terimakasih Telah Menggunakan Aplikasi Ini ...");
 			help.getHoldConsole();
@@ -34,7 +37,7 @@ public class Menu
 			break;
 		default:
 			help.getErrorMessage();
-			tampilan.menu.utama();
+			views.menu.utama();
 			break;
 		}
 	}
@@ -43,35 +46,35 @@ public class Menu
 	{
 		switch (menu) {
 		case 1:
-			tampilan.konversi.binary();
+			views.convert.binary();
 			break;
 		case 2:
-			tampilan.konversi.octal();
+			views.convert.octal();
 			break;
 		case 3:
-			tampilan.konversi.decimal();
+			views.convert.decimal();
 			break;
 		case 4:
-			tampilan.konversi.hex();
+			views.convert.hex();
 			break;
 		case 5:
-			tampilan.konversi.fractionBinary();
+			views.convert.fractionBinary();
 			break;
 		case 6:
-			tampilan.konversi.fractionOctal();
+			views.convert.fractionOctal();
 			break;
 		case 7:
-			tampilan.konversi.fractionDecimal();
+			views.convert.fractionDecimal();
 			break;
 		case 8:
-			tampilan.konversi.pecahanHexa();
+			views.convert.fractionHex();
 			break;
 		case 9:
-			tampilan.menu.utama();
+			views.menu.utama();
 			break;
 		default:
 			help.getErrorMessage();
-			tampilan.menu.konversi();
+			views.menu.konversi();
 			break;
 		}
 	}
@@ -80,20 +83,17 @@ public class Menu
 	{
 		switch (menu) {
 		case 1:
-			tampilan.galat.relatif();
+			views.error.galat();
 			break;
 		case 2:
-			tampilan.galat.mutlak();
+			views.error.penjalaran();
 			break;
 		case 3:
-			tampilan.galat.penjalaran();
-			break;
-		case 4:
-			tampilan.menu.utama();
+			views.menu.utama();
 			break;
 		default:
 			help.getErrorMessage();
-			tampilan.menu.galat();
+			views.menu.galat();
 			break;
 		}
 	}
@@ -102,30 +102,93 @@ public class Menu
 	{
 		switch (menu) {
 		case 1:
-			tampilan.metode.titikTetap();
+			views.nonlinier.titikTetap();
 			break;
 		case 2:
-			tampilan.metode.bagiDua();
+			views.nonlinier.bagiDua();
 			break;
 		case 3:
-			tampilan.metode.regulaFalsi();
+			views.nonlinier.regulaFalsi();
 			break;
 		case 4:
-			tampilan.metode.newtonRaphson();
+			views.nonlinier.newtonRaphson();
 			break;
 		case 5:
-			tampilan.metode.scant();
+			views.nonlinier.scant();
 			break;
 		case 6:
-			tampilan.menu.utama();
+			views.menu.utama();
 			break;
 		default:
 			help.getErrorMessage();
-			tampilan.menu.nonlinier();
+			views.menu.nonlinier();
+			break;
+		}
+	}
+
+	public void interpolasi(int menu)
+	{
+		switch (menu) {
+		case 1:
+			views.interpolasi.pendekatanLagrange();
+			break;
+		case 2:
+			views.interpolasi.polinomialNewton();
+			break;
+		case 3:
+			views.menu.utama();
+			break;
+		default:
+			help.getErrorMessage();
+			views.menu.nonlinier();
+			break;
+		}
+	}
+	
+	public void turunan(int menu)
+	{
+		switch (menu) {
+		case 1:
+			views.turunan.selisihBagi();
+			break;
+		case 2:
+			views.turunan.orderh2();
+			break;
+		case 3:
+			views.turunan.orderh4();
+			break;
+		case 4:
+			views.menu.utama();
+			break;
+		default:
+			help.getErrorMessage();
+			views.menu.nonlinier();
+			break;
+		}
+	}
+	
+	public void integral(int menu)
+	{
+		switch (menu) {
+		case 1:
+			views.integral.trapesium();
+			break;
+		case 2:
+			views.integral.simpson();
+			break;
+		case 3:
+			views.integral.romberg();
+			break;
+		case 4:
+			views.menu.utama();
+			break;
+		default:
+			help.getErrorMessage();
+			views.menu.nonlinier();
 			break;
 		}
 	}
 	
 	public Util help = new Util();
-	public Views tampilan = new Views();
+	public Views views = new Views();
 }

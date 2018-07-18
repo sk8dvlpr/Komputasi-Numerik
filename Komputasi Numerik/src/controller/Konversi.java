@@ -201,7 +201,8 @@ public class Konversi
 		return sum;
 	}
 	
-	public double fracBintoDec(String number) {
+	public double fracBintoDec(String number)
+	{
 		double sum = 0;
 		int length = number.length();
 		

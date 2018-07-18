@@ -19,97 +19,76 @@ public class Nonlinier
 	
 	public void titikTetap()
 	{
-		int i;
-		double fixed;
-		double gx[] = new double[100];
-		double fx[] = new double[100];
-		double value[] = new double[100];
-		
 		this.judul();
 		System.out.println("===================================================");
 		System.out.println("            Nonlinier Metode Titik Tetap           ");
 		System.out.println("===================================================");
-		System.out.println("=                    DIKETAHUI                    =");
-		System.out.println("===================================================");
-		System.out.println("= f(x) : x - e^(-x)                               =");
-		System.out.println("= x    : e^(-x)                                   =");
-		System.out.println("===================================================");
-		System.out.print("= Tentukan Nilai Awal  : "); value[0] = input.nextDouble();
-		System.out.print("= Tentukan Titik Tetap : "); fixed = input.nextDouble();
+		System.out.print("= Tentukan Nilai Awal  : ");
+		double value = input.nextDouble();
+		System.out.print("= Tentukan Nilai Error : ");
+		double error = input.nextDouble();
+		System.out.print("= Iterasi              : ");
+		double iterasi = input.nextDouble();
+		
+		double y = 0;
+		int i = 0;
 		
 		System.out.println("===================================================");
-		System.out.println("=                      HASIL                      =");
+        System.out.println("=                      HASIL                      =");
+        System.out.println("===================================================");
+		System.out.println("iterasi \tx0 \t\tfx");
 		System.out.println("===================================================");
-		System.out.println("= Iterasi    x               g(x)            f(x)  ");
-		
-		for (i = 0; i < fixed; i++)
-		{
-			
-			fx[i] = value[i] - proses.metode.titikTetap(value[i]);
-			gx[i] = proses.metode.titikTetap(value[i]);
-			
-			System.out.println("= " + (i+1) + "          " + df.format(value[i]) + "          " + df.format(gx[i]) + "          " + df.format(fx[i]));
-			
-			value[i+1] = gx[i];
-		}
-		
-		System.out.println("===================================================");
-		System.out.println("= Jadi Hamparan Akar Yang Diperoleh Menggunakan    ");
-		System.out.println("= Metode Titik Tetap Adalah : " + df.format(value[i-1]));
-		System.out.println("===================================================");
+        while (Math.abs(process.nonlinier.fTitikTetap(value)) >= error && i < iterasi) {
+            i++;
+            value = process.nonlinier.gTitikTetap(value);
+            y = process.nonlinier.fTitikTetap(value);
+            System.out.println(i + "\t\t" + df.format(value) + "\t\t" + df.format(y));
+        }
+        System.out.println("===================================================");
+        System.out.println("Akar Terletak Di " + df.format(value) +  " Dengan Nilai f(x) = " + y);
+        System.out.println("===================================================");
 		
 		help.getHoldConsole();
 		help.getClearConsole();
-		tampilan.menu.nonlinier();
+		views.menu.nonlinier();
 	}
 	
 	public void bagiDua()
 	{
-		int iterasi;
-		double a[] = new double[100];
-		double b[] = new double[100];
-		double x[] = new double[100];
-		double fa[] = new double[100];
-		double fx[] = new double[100];
-		
 		this.judul();
 		System.out.println("===================================================");
 		System.out.println("              Nonlinier Metode Bagi Dua            ");
 		System.out.println("===================================================");
-		System.out.println("=                    DIKETAHUI                    =");
+		System.out.print("= Masukkan nilai x(0) : ");
+		double x0 = input.nextDouble();
+		System.out.print("= Masukkan batas x(1) : ");
+		double x1 = input.nextDouble();
+		System.out.print("= Iterasi             : ");
+		int iterasi = input.nextInt();
+		
+		double c, fa, fb, fc, lebar2 = 0;
 		System.out.println("===================================================");
-		System.out.println("= f(x) : x.e - x+1                                =");
+		System.out.println("Iterasi \tNilai Tengah \tError \t\tLebar");
 		System.out.println("===================================================");
-		System.out.print("= Masukkan Nilai a : "); a[0] = input.nextDouble();
-		System.out.print("= Masukkan Nilai b : "); b[0] = input.nextDouble();
-		
-		x[0] = ((a[0]+b[0])/2);
-		
-		System.out.println("=\n");
-		System.out.println("= Nilai x0 : " + x[0]);
-		System.out.print("= Tentukan Batas Iterasi : "); iterasi = input.nextInt();
-		
-		for(int i = 0; i < iterasi; i++) {
-			fa[i] = (Math.pow(a[i], 3) + 4*Math.pow(a[i], 2) - 10);
-			fx[i] = (Math.pow(x[i], 3) + 4*Math.pow(x[i], 2) - 10);
-			
-			// fa[i] = (a[i] * Math.exp(1) - a[i] + 1);
-			// fx[i] = (x[i] * Math.exp(1) - x[i] + 1);
-			
-			System.out.println("= " + (i + 1) + "\t\t" + df.format(a[i]) + "\t\t" + df.format(b[i]) + "\t\t" + df.format(x[i]) + "\t\t" + df.format(fa[i]) + "\t\t" + df.format(fx[i]));
-			
-			if (fa[i] * fx[i] < 0) {
-				a[i+1] = a[i];
-				b[i+1] = x[i];
-			} else {
-				if (fa[i] * fx[i] > 0) {
-					a[i+1] = x[i];
-					b[i+1] = b[i];
-				}
-				
-				x[i+1] = (a[i+1] + b[i+1] / 2);
-			}
-		}
+		for (int i = 0; i < iterasi; i++) {
+            c = (x0 + x1) / 2;
+            lebar2 = c - x0;
+            fa = process.nonlinier.bagidua(x0);
+            fb = process.nonlinier.bagidua(x1);
+            fc = process.nonlinier.bagidua(c);
+            if ((fa * fc < 0)) {
+                x0 = x0;
+                x1 = c;
+            } else {
+                x0 = c;
+                x1 = x1;
+            }
+            
+            System.out.println(i + "\t\t" + df.format(c) + "\t\t" + df.format(fc) + "\t\t" + df.format(lebar2));
+        }
+		System.out.println("===================================================");
+		help.getHoldConsole();
+		views.menu.nonlinier();
 	}
 	
 	public void regulaFalsi()
@@ -118,6 +97,43 @@ public class Nonlinier
 		System.out.println("===================================================");
 		System.out.println("           Nonlinier Metode Regula Falsi           ");
 		System.out.println("===================================================");
+		System.out.print("= Masukkan nilai x     : ");
+		double bilX = input.nextDouble();
+		System.out.print("= Masukkan nilai y     : ");
+		double bilY = input.nextDouble();
+		System.out.print("= Masukkan nilai error : ");
+		double error = input.nextDouble();
+		System.out.print("= Iterasi              : ");
+		int iterasi = input.nextInt();
+		
+		double fa, fb, fc = 1000, c = 0;
+		
+		System.out.println("===================================================");
+		System.out.println("iterasi \tX \t\tY \t\tHamparan Akar \tGalat");
+		System.out.println("===================================================");
+		for (int j = 0; j < iterasi; j++) {
+            if (Math.abs(bilX - bilY) > error) {
+                fa = process.nonlinier.regulaFalsi(bilX);
+                fb = process.nonlinier.regulaFalsi(bilY);
+                c = bilY - (fb * (bilY - bilX) / (fb - fa));
+                fc = process.nonlinier.regulaFalsi(c);
+                System.out.println(j + "\t\t" + df.format(bilX) + "\t\t" + df.format(bilY) + "\t\t" + df.format(c) + "\t\t" + df.format(fc));
+                if (Math.abs(fc) < error) {
+                    bilX = c;
+                    bilY = c;
+
+                } else {
+                    if (fa * fc < 0) {
+                        bilY = c;
+                    } else {
+                        bilX = c;
+                    }
+                }
+            }
+        }
+		System.out.println("===================================================");
+		help.getHoldConsole();
+		views.menu.nonlinier();
 	}
 	
 	public void newtonRaphson()
@@ -126,19 +142,74 @@ public class Nonlinier
 		System.out.println("===================================================");
 		System.out.println("           Nonlinier Metode Newton Raphson         ");
 		System.out.println("===================================================");
+		System.out.print("= Masukkan nilai x     : ");
+		double bilX = input.nextDouble();
+		System.out.print("= Masukkan nilai error : ");
+		double error = input.nextDouble();
+		System.out.print("= Iterasi              : ");
+		int iterasi = input.nextInt();
+		
+		double fx, fxAksen;
+		System.out.println("===================================================");
+		System.out.println("Iterasi \tX \t\tfx \t\tfx'");
+		System.out.println("===================================================");
+		for (iterasi = 0; iterasi <= 1000; iterasi++) {
+            fx = process.nonlinier.newtonRaphson(bilX);
+            fxAksen = process.nonlinier.newtonRaphsonAksen(bilX);
+            System.out.println(iterasi + "\t\t" + df.format(bilX) + "\t\t" + df.format(fx) + "\t\t" + df.format(fxAksen));
+            bilX = bilX - (fx / fxAksen);
+            if (fx < 0) {
+                fx = (-fx);
+                if (fx <= error)
+                    break;
+            } else {
+                if (fx <= error)
+                    break;
+            }
+		}
+		System.out.println("===================================================");
+		help.getHoldConsole();
+		views.menu.nonlinier();
 	}
 	
 	public void scant()
 	{
 		this.judul();
 		System.out.println("===================================================");
-		System.out.println("               Nonlinier Metode Scant              ");
+		System.out.println("=              Nonlinier Metode Scant             =");
 		System.out.println("===================================================");
+		System.out.print("= Masukkan Nilai x : ");
+		double nilaiX = input.nextDouble();
+		System.out.print("= Masukkan Nilai y : ");
+		double nilaiY = input.nextDouble();
+		System.out.print("= Iterasi          : ");
+		int iterasi = input.nextInt();
+		System.out.println("===================================================");
+		System.out.println("Iterasi \tNilai Tengah \tLebar \t\tGalat");
+		System.out.println("===================================================");
+		
+		double fa, fb, c, lebar = 0;
+		for (int i = 1; i < iterasi; i++) {
+            fa = process.nonlinier.scant(nilaiX);
+            fb = process.nonlinier.scant(nilaiY);
+            
+            c = nilaiY - (fb * (nilaiY - nilaiX) / (fb - fa));
+            lebar = c - nilaiX;
+            nilaiX = nilaiY;
+            nilaiY = c;
+            if (fa == fb)
+                break;
+            
+            System.out.println(i + "\t\t" + df.format(c) + "\t\t" + df.format(lebar) + "\t\t" + df.format(fb));
+        }
+		System.out.println("===================================================");
+		help.getHoldConsole();
+		views.menu.nonlinier();
 	}
 	
 	public Util help = new Util();
 	public Scanner input = new Scanner(System.in);
-	public static Controller proses = new Controller();
-	public static Views tampilan = new Views();
+	public static Controller process = new Controller();
+	public static Views views = new Views();
 	public DecimalFormat df = new DecimalFormat("##0.0000");
 }

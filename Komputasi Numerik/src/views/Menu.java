@@ -32,11 +32,12 @@ public class Menu
         System.out.println("= 3. Menghitung Galat                             =");
         System.out.println("= 4. Akar Persamaan Non Linier                    =");
         System.out.println("= 5. Interpolasi                                  =");
-        System.out.println("= 6. Turunan Fungsi                               =");
-        System.out.println("= 7. Keluar                                       =");
+        System.out.println("= 6. Turunan Numerik                              =");
+        System.out.println("= 7. Integral");
+        System.out.println("= 8. Keluar                                       =");
         System.out.println("===================================================");
         System.out.print("Pilih Menu = ");
-        proses.menu.utama(input.nextInt());
+        process.menu.utama(input.nextInt());
 	}
 	
 	public void konversi()
@@ -56,7 +57,7 @@ public class Menu
         System.out.println("= 9. Kembali                                      =");
         System.out.println("===================================================");
         System.out.print("Pilih Menu = ");
-        proses.menu.konversi_bilangan(input.nextInt());
+        process.menu.konversi_bilangan(input.nextInt());
     }
 	
 	public void galat()
@@ -65,13 +66,12 @@ public class Menu
         System.out.println("===================================================");
         System.out.println("=                 Menghitung Galat                =");
         System.out.println("===================================================");
-        System.out.println("= 1. Galat Relatif                                =");
-        System.out.println("= 2. Galat Mutlak                                 =");
-        System.out.println("= 3. Penjalaran Galat                             =");
-        System.out.println("= 4. Kembali                                      =");
+        System.out.println("= 1. Galat Relatif & Galat Mutlak                 =");
+        System.out.println("= 2. Penjalaran Galat                             =");
+        System.out.println("= 3. Kembali                                      =");
         System.out.println("===================================================");
         System.out.print("Pilih Menu = ");
-        proses.menu.galat(input.nextInt());
+        process.menu.galat(input.nextInt());
     }
     
     public void nonlinier()
@@ -88,7 +88,7 @@ public class Menu
         System.out.println("= 6. Kembali                                      =");
         System.out.println("===================================================");
         System.out.print("Pilih Menu = ");
-        proses.menu.nonlinier(input.nextInt());
+        process.menu.nonlinier(input.nextInt());
     }
     
     public void interpolasi()
@@ -99,18 +99,43 @@ public class Menu
         System.out.println("===================================================");
         System.out.println("= 1. Pendekatan Lagrange                          =");
         System.out.println("= 2. Polinomial Newton                            =");
-        System.out.println("= 3. Polinomial Chebechev (optional)              =");
-        System.out.println("= 4. Kembali                                      =");
+        System.out.println("= 3. Kembali                                      =");
         System.out.println("===================================================");
         System.out.print("Pilih Menu = ");
+        process.menu.interpolasi(input.nextInt());
     }
     
     public void turunan()
     {
-        
+    	this.judul();
+        System.out.println("===================================================");
+        System.out.println("=                  Turunan Numerik                =");
+        System.out.println("===================================================");
+        System.out.println("= 1. Formula Limit Selisih Bagi                   =");
+        System.out.println("= 2. Formula Terpusat Order O(h2)                 =");
+        System.out.println("= 3. Formula Terpusat Order O(h4)                 =");
+        System.out.println("= 4. Kembali                                      =");
+        System.out.println("===================================================");
+        System.out.print("Pilih Menu = ");
+        process.menu.turunan(input.nextInt());
+    }
+    
+    public void integral()
+    {
+    	this.judul();
+        System.out.println("===================================================");
+        System.out.println("=                 Integral Numerik                =");
+        System.out.println("===================================================");
+        System.out.println("= 1. Metode Trapesium                             =");
+        System.out.println("= 2. Metode Aturan Simpson                        =");
+        System.out.println("= 3. Metode Romberg                               =");
+        System.out.println("= 4. Kembali                                      =");
+        System.out.println("===================================================");
+        System.out.print("Pilih Menu = ");
+        process.menu.integral(input.nextInt());
     }
 	
 	public Util help = new Util();
 	public Scanner input = new Scanner(System.in);
-	public static Controller proses = new Controller();
+	public static Controller process = new Controller();
 }

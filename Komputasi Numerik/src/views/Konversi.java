@@ -30,12 +30,12 @@ public class Konversi
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
                 System.out.println("= Biner       : " + value);
-                System.out.println("= Oktal       : " + proses.konversi.getBinarytoOctal(value));
-                System.out.println("= Desimal     : " + proses.konversi.getBinarytoDecimal(value));
-                System.out.print  ("= Hexadesimal : "); proses.konversi.getBinarytoHex(value);
+                System.out.println("= Oktal       : " + process.convert.getBinarytoOctal(value));
+                System.out.println("= Desimal     : " + process.convert.getBinarytoDecimal(value));
+                System.out.print  ("= Hexadesimal : "); process.convert.getBinarytoHex(value);
                 System.out.println("===================================================");
                 help.getHoldConsole();
-                tampilan.menu.konversi();
+                views.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
                 System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
                 System.out.print("\nMasukkan Bilangan Biner : ");
@@ -58,13 +58,13 @@ public class Konversi
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
-                System.out.println("= Biner       : " + proses.konversi.getOctaltoBinary(value));
+                System.out.println("= Biner       : " + process.convert.getOctaltoBinary(value));
                 System.out.println("= Oktal       : " + value);
-                System.out.println("= Desimal     : " + proses.konversi.getOctaltoDecimal(value));
-                System.out.print  ("= Hexadesimal : "); proses.konversi.getOctaltoHex(value);
+                System.out.println("= Desimal     : " + process.convert.getOctaltoDecimal(value));
+                System.out.print  ("= Hexadesimal : "); process.convert.getOctaltoHex(value);
                 System.out.println("===================================================");
                 help.getHoldConsole();
-                tampilan.menu.konversi();
+                views.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
                 System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
                 System.out.print("\nMasukkan Bilangan Biner : ");
@@ -87,13 +87,13 @@ public class Konversi
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
-                System.out.print  ("= Biner       : "); proses.konversi.getDecimaltoBinary(Integer.parseInt(value));
-                System.out.println("\n= Oktal       : " + proses.konversi.getDecimaltoOctal(value));
+                System.out.print  ("= Biner       : "); process.convert.getDecimaltoBinary(Integer.parseInt(value));
+                System.out.println("\n= Oktal       : " + process.convert.getDecimaltoOctal(value));
                 System.out.println("= Desimal     : " + value);
-                System.out.print  ("= Hexadesimal : "); proses.konversi.getDecimaltoHex(value);
+                System.out.print  ("= Hexadesimal : "); process.convert.getDecimaltoHex(value);
                 System.out.println("===================================================");
                 help.getHoldConsole();
-                tampilan.menu.konversi();
+                views.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
                 System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
                 System.out.print("\nMasukkan Bilangan Biner : ");
@@ -116,13 +116,13 @@ public class Konversi
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
-                System.out.print  ("= Biner       : "); proses.konversi.getHextoBinary(value);
-                System.out.println("= Oktal       : " + proses.konversi.getHextoOctal(value));
-                System.out.println("= Desimal     : " + proses.konversi.getHextoDecimal(value));
+                System.out.print  ("= Biner       : "); process.convert.getHextoBinary(value);
+                System.out.println("= Oktal       : " + process.convert.getHextoOctal(value));
+                System.out.println("= Desimal     : " + process.convert.getHextoDecimal(value));
                 System.out.println("= Hexadesimal : " + value);
                 System.out.println("===================================================");
                 help.getHoldConsole();
-                tampilan.menu.konversi();
+                views.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
                 System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
                 System.out.print("\nMasukkan Bilangan Biner : ");
@@ -146,13 +146,13 @@ public class Konversi
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
                 System.out.println("= Biner       : " + value);
-                System.out.println("= Oktal       : " + proses.konversi.getFractionBinarytoOctal(value));
-                System.out.println("= Desimal     : " + proses.konversi.getFractionBinarytoDecimal(value));
-                System.out.print  ("= Hexadesimal : "); proses.konversi.getFractionBinarytoHex(value); 
+                System.out.println("= Oktal       : " + process.convert.getFractionBinarytoOctal(value));
+                System.out.println("= Desimal     : " + process.convert.getFractionBinarytoDecimal(value));
+                System.out.print  ("= Hexadesimal : "); process.convert.getFractionBinarytoHex(value); 
                 System.out.println("===================================================");
                 
                 help.getHoldConsole();
-                tampilan.menu.konversi();
+                views.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
                 System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
                 System.out.print("\nMasukkan Bilangan Biner : ");
@@ -175,13 +175,13 @@ public class Konversi
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
-                System.out.println("= Biner       : " + proses.konversi.getFractionOctaltoBinary(value));
+                System.out.println("= Biner       : " + process.convert.getFractionOctaltoBinary(value));
                 System.out.println("= Oktal       : " + value);
-                System.out.println("= Desimal     : " + proses.konversi.getFractionOctaltoDecimal(value));
-                System.out.print  ("= Hexadesimal : "); proses.konversi.getFractionOctaltoHex(value);
+                System.out.println("= Desimal     : " + process.convert.getFractionOctaltoDecimal(value));
+                System.out.print  ("= Hexadesimal : "); process.convert.getFractionOctaltoHex(value);
                 System.out.println("===================================================");
                 help.getHoldConsole();
-                tampilan.menu.konversi();
+                views.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
                 System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
                 System.out.print("\nMasukkan Bilangan Biner : ");
@@ -204,13 +204,13 @@ public class Konversi
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
-                System.out.println("= Biner       : " + proses.konversi.getFractionDecimaltoBinary(value, 7));
-                System.out.println("= Oktal       : " + proses.konversi.getFractionDecimaltoOctal(value, 7));
+                System.out.println("= Biner       : " + process.convert.getFractionDecimaltoBinary(value, 7));
+                System.out.println("= Oktal       : " + process.convert.getFractionDecimaltoOctal(value, 7));
                 System.out.println("= Desimal     : " + value);
-                System.out.print  ("= Hexadesimal : "); proses.konversi.getFractionDecimaltoHex(String.valueOf(value));
+                System.out.print  ("= Hexadesimal : "); process.convert.getFractionDecimaltoHex(String.valueOf(value));
                 System.out.println("===================================================");
                 help.getHoldConsole();
-                tampilan.menu.konversi();
+                views.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
                 System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
                 System.out.print("\nMasukkan Bilangan Biner : ");
@@ -219,7 +219,7 @@ public class Konversi
         }
 	}
 	
-	public void pecahanHexa()
+	public void fractionHex()
 	{
 		this.judul();
 		System.out.println("===================================================");
@@ -233,13 +233,13 @@ public class Konversi
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
-                System.out.println("= Biner       : " + proses.konversi.getFractionHextoBinary(value));
-                System.out.println("= Oktal       : " + proses.konversi.getFractionHextoOctal(value));
-                System.out.println("= Desimal     : " + proses.konversi.getFractionHextoDecimal(value));
+                System.out.println("= Biner       : " + process.convert.getFractionHextoBinary(value));
+                System.out.println("= Oktal       : " + process.convert.getFractionHextoOctal(value));
+                System.out.println("= Desimal     : " + process.convert.getFractionHextoDecimal(value));
                 System.out.println("= Hexadesimal : " + value);
                 System.out.println("===================================================");
                 help.getHoldConsole();
-                tampilan.menu.konversi();
+                views.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
                 System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
                 System.out.print("\nMasukkan Bilangan Biner : ");
@@ -250,6 +250,6 @@ public class Konversi
 	
 	public Util help = new Util();
 	public Scanner input = new Scanner(System.in);
-	public static Views tampilan = new Views();
-	public static Controller proses = new Controller();
+	public static Views views = new Views();
+	public static Controller process = new Controller();
 }
