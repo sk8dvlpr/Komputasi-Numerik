@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 
 import controller.Controller;
-import util.Util;
+import util.Utilities;
 
 public class Nonlinier
 {
@@ -207,7 +207,7 @@ public class Nonlinier
 		views.menu.nonlinier();
 	}
 	
-	public Util help = new Util();
+	public Utilities help = new Utilities();
 	public Scanner input = new Scanner(System.in);
 	public static Controller process = new Controller();
 	public static Views views = new Views();

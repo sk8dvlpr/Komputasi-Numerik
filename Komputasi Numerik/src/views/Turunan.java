@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 
 import controller.Controller;
-import util.Util;
+import util.Utilities;
 
 public class Turunan 
 {
@@ -122,7 +122,7 @@ public class Turunan
         views.menu.turunan();
 	}
 	
-	public Util help = new Util();
+	public Utilities help = new Utilities();
 	public Scanner input = new Scanner(System.in);
 	public static Views views = new Views();
 	public static Controller process = new Controller();

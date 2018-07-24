@@ -3,7 +3,7 @@ package views;
 import java.util.Scanner;
 
 import controller.Controller;
-import util.Util;
+import util.Utilities;
 
 public class Integral
 {
@@ -48,7 +48,7 @@ public class Integral
 		System.out.print("= Masukkan nilai n     : ");
 		int n = input.nextInt();
 		System.out.println("===================================================");
-		System.out.println("Nilai simpson adalah : " + process.integral.simpsons(batas_bawah,batas_atas, n));
+		System.out.println("Nilai Simpson Adalah : " + process.integral.simpsons(batas_bawah,batas_atas, n));
 		System.out.println("===================================================");		
         help.getHoldConsole();
         views.menu.integral();
@@ -94,7 +94,7 @@ public class Integral
         views.menu.integral();
 	}
 	
-	public Util help = new Util();
+	public Utilities help = new Utilities();
 	public Scanner input = new Scanner(System.in);
 	public static Views views = new Views();
 	public static Controller process = new Controller();

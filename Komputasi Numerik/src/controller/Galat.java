@@ -7,7 +7,7 @@ public class Galat
 		return (nilaiSejati - nilaiHamparan);
 	}
 	
-	public double galatRalatif(double galatMutlak, double value)
+	public double galatRelatif(double galatMutlak, double value)
 	{
 		return (galatMutlak / value);
 	}

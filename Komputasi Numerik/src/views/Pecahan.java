@@ -3,7 +3,7 @@ package views;
 import java.util.Scanner;
 
 import controller.Controller;
-import util.Util;
+import util.Utilities;
 
 public class Pecahan
 {
@@ -18,15 +18,13 @@ public class Pecahan
         System.out.println("=           Penjumlahan Bilangan Pecahan          =");
         System.out.println("===================================================");
         
-        double value;
-        int looping;
-        
         while (true) {
             try {
                 System.out.print("= Masukkan Sebuah Bilangan Pecahan : ");
-                value = input.nextDouble();
+                double value = input.nextDouble();
                 System.out.print("= Masukkan Jumlah Penjumlahan      : ");
-                looping = input.nextInt();
+                int looping = input.nextInt();
+                
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
                 System.out.println("===================================================");
@@ -40,7 +38,7 @@ public class Pecahan
         }
 	}
 	
-	public Util help = new Util();
+	public Utilities help = new Utilities();
 	public Scanner input = new Scanner(System.in);
 	public static Views tampilan = new Views();
 	public static Controller proses = new Controller();

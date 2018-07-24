@@ -2,11 +2,11 @@ package views;
 
 import java.util.Scanner;
 import controller.Controller;
-import util.Util;
+import util.Utilities;
 
 public class Konversi
 {
-	public void judul()
+	public void title()
 	{
 		help.getClearConsole();
 		System.out.println("===================================================");
@@ -17,14 +17,14 @@ public class Konversi
 	
 	public void binary()
 	{
-		this.judul();
+		this.title();
         System.out.println("===================================================");
         System.out.println("=             Konversi Bilangan Biner             =");
         System.out.println("===================================================");
-        System.out.print("Masukkan Bilangan Biner : ");
         
         while (true) {
             try {
+            	System.out.print("Masukkan Bilangan Biner : ");
                 String value = input.next();
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
@@ -37,8 +37,7 @@ public class Konversi
                 help.getHoldConsole();
                 views.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
-                System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
-                System.out.print("\nMasukkan Bilangan Biner : ");
+                help.getErrorMessage();
                 input.nextLine();
             }
         }
@@ -46,14 +45,14 @@ public class Konversi
 	
 	public void octal()
 	{
-		this.judul();
+		this.title();
         System.out.println("===================================================");
         System.out.println("=             Konversi Bilangan Oktal             =");
         System.out.println("===================================================");
-        System.out.print("Masukkan Bilangan Oktal : ");
         
         while (true) {
             try {
+            	System.out.print("Masukkan Bilangan Oktal : ");
                 String value = input.next();
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
@@ -66,8 +65,7 @@ public class Konversi
                 help.getHoldConsole();
                 views.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
-                System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
-                System.out.print("\nMasukkan Bilangan Biner : ");
+                help.getErrorMessage();
                 input.nextLine();
             }
         }
@@ -75,14 +73,14 @@ public class Konversi
 	
 	public void decimal()
 	{
-		this.judul();
+		this.title();
         System.out.println("===================================================");
         System.out.println("=            Konversi Bilangan Desimal            =");
         System.out.println("===================================================");
-        System.out.print("Masukkan Bilangan Desimal : ");
         
         while (true) {
             try {
+            	System.out.print("Masukkan Bilangan Desimal : ");
                 String value = input.next();
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
@@ -95,8 +93,7 @@ public class Konversi
                 help.getHoldConsole();
                 views.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
-                System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
-                System.out.print("\nMasukkan Bilangan Biner : ");
+                help.getErrorMessage();
                 input.nextLine();
             }
         }
@@ -104,14 +101,14 @@ public class Konversi
 	
 	public void hex()
 	{
-		this.judul();
+		this.title();
         System.out.println("===================================================");
         System.out.println("=          Konversi Bilangan Hexadesimal          =");
         System.out.println("===================================================");
-        System.out.print("Masukkan Bilangan Hexadesimal : ");
         
         while (true) {
             try {
+            	System.out.print("Masukkan Bilangan Hexadesimal : ");
                 String value = input.next();
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
@@ -124,8 +121,7 @@ public class Konversi
                 help.getHoldConsole();
                 views.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
-                System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
-                System.out.print("\nMasukkan Bilangan Biner : ");
+                help.getErrorMessage();
                 input.nextLine();
             }
         }
@@ -133,14 +129,14 @@ public class Konversi
 	
 	public void fractionBinary()
 	{
-		this.judul();
+		this.title();
 		System.out.println("===================================================");
         System.out.println("=         Konversi Bilangan Pecahan Biner         =");
         System.out.println("===================================================");
-        System.out.print("Masukkan Bilangan Pecahan Biner : ");
         
         while (true) {
             try {
+            	System.out.print("Masukkan Bilangan Pecahan Biner : ");
                 String value = input.next();
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
@@ -150,12 +146,10 @@ public class Konversi
                 System.out.println("= Desimal     : " + process.convert.getFractionBinarytoDecimal(value));
                 System.out.print  ("= Hexadesimal : "); process.convert.getFractionBinarytoHex(value); 
                 System.out.println("===================================================");
-                
                 help.getHoldConsole();
                 views.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
-                System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
-                System.out.print("\nMasukkan Bilangan Biner : ");
+                help.getErrorMessage();
                 input.nextLine();
             }
         }
@@ -163,14 +157,14 @@ public class Konversi
 	
 	public void fractionOctal()
 	{
-		this.judul();
+		this.title();
 		System.out.println("===================================================");
         System.out.println("=         Konversi Bilangan Pecahan Oktal         =");
         System.out.println("===================================================");
-        System.out.print("Masukkan Bilangan Pecahan Oktal : ");
         
         while (true) {
             try {
+            	System.out.print("Masukkan Bilangan Pecahan Oktal : ");
                 String value = input.next();
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
@@ -183,8 +177,7 @@ public class Konversi
                 help.getHoldConsole();
                 views.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
-                System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
-                System.out.print("\nMasukkan Bilangan Biner : ");
+                help.getErrorMessage();
                 input.nextLine();
             }
         }
@@ -192,14 +185,14 @@ public class Konversi
 	
 	public void fractionDecimal()
 	{
-		this.judul();
+		this.title();
 		System.out.println("===================================================");
         System.out.println("=        Konversi Bilangan Pecahan Desimal        =");
         System.out.println("===================================================");
-        System.out.print("Masukkan Bilangan Pecahan Desimal : ");
         
         while (true) {
             try {
+            	System.out.print("Masukkan Bilangan Pecahan Desimal : ");
                 double value = input.nextDouble();
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
@@ -212,8 +205,7 @@ public class Konversi
                 help.getHoldConsole();
                 views.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
-                System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
-                System.out.print("\nMasukkan Bilangan Biner : ");
+                help.getErrorMessage();
                 input.nextLine();
             }
         }
@@ -221,14 +213,14 @@ public class Konversi
 	
 	public void fractionHex()
 	{
-		this.judul();
+		this.title();
 		System.out.println("===================================================");
         System.out.println("=      Konversi Bilangan Pecahan Hexadesimal      =");
         System.out.println("===================================================");
-        System.out.print("Masukkan Bilangan Pecahan Hexa : ");
         
         while (true) {
             try {
+            	System.out.print("Masukkan Bilangan Pecahan Hexa : ");
                 String value = input.next();
                 System.out.println("===================================================");
                 System.out.println("=                      HASIL                      =");
@@ -241,14 +233,13 @@ public class Konversi
                 help.getHoldConsole();
                 views.menu.konversi();
             } catch (java.util.InputMismatchException ex) {
-                System.out.println("\nMaaf input anda salah, mohon masukkan ulang!!!");
-                System.out.print("\nMasukkan Bilangan Biner : ");
+                help.getErrorMessage();
                 input.nextLine();
             }
         }
 	}
 	
-	public Util help = new Util();
+	public Utilities help = new Utilities();
 	public Scanner input = new Scanner(System.in);
 	public static Views views = new Views();
 	public static Controller process = new Controller();

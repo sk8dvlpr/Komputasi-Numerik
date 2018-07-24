@@ -6,7 +6,7 @@ import util.*;
 
 public class Menu
 {
-	public void judul()
+	public void title()
 	{
 		help.getClearConsole();
 		System.out.println("===================================================");
@@ -23,7 +23,7 @@ public class Menu
 	
 	public void utama()
 	{
-		this.judul();
+		this.title();
 		System.out.println("===================================================");
         System.out.println("=                    Main Menu                    =");
         System.out.println("===================================================");
@@ -33,16 +33,24 @@ public class Menu
         System.out.println("= 4. Akar Persamaan Non Linier                    =");
         System.out.println("= 5. Interpolasi                                  =");
         System.out.println("= 6. Turunan Numerik                              =");
-        System.out.println("= 7. Integral");
+        System.out.println("= 7. Integral                                     =");
         System.out.println("= 8. Keluar                                       =");
         System.out.println("===================================================");
-        System.out.print("Pilih Menu = ");
-        process.menu.utama(input.nextInt());
+        
+        while(true) {
+        	try {
+            	System.out.print("= Pilih Menu : ");
+            	process.menu.utama(input.nextInt());
+            } catch (java.util.InputMismatchException ex) {
+            	help.getErrorMessage();
+                input.nextLine();
+            }
+        }
 	}
 	
 	public void konversi()
     {
-        this.judul();
+        this.title();
         System.out.println("===================================================");
         System.out.println("=                Konversi Bilangan                =");
         System.out.println("===================================================");
@@ -56,13 +64,21 @@ public class Menu
         System.out.println("= 8. Input Pecahan Hexadesimal                    =");
         System.out.println("= 9. Kembali                                      =");
         System.out.println("===================================================");
-        System.out.print("Pilih Menu = ");
-        process.menu.konversi_bilangan(input.nextInt());
+        
+        while(true) {
+        	try {
+        		System.out.print("= Pilih Menu : ");
+                process.menu.konversi_bilangan(input.nextInt());
+            } catch (java.util.InputMismatchException ex) {
+            	help.getErrorMessage();
+                input.nextLine();
+            }
+        }
     }
 	
 	public void galat()
     {
-        this.judul();
+        this.title();
         System.out.println("===================================================");
         System.out.println("=                 Menghitung Galat                =");
         System.out.println("===================================================");
@@ -70,13 +86,21 @@ public class Menu
         System.out.println("= 2. Penjalaran Galat                             =");
         System.out.println("= 3. Kembali                                      =");
         System.out.println("===================================================");
-        System.out.print("Pilih Menu = ");
-        process.menu.galat(input.nextInt());
+        
+        while(true) {
+        	try {
+        		System.out.print("= Pilih Menu : ");
+                process.menu.galat(input.nextInt());
+            } catch (java.util.InputMismatchException ex) {
+            	help.getErrorMessage();
+                input.nextLine();
+            }
+        }
     }
     
     public void nonlinier()
     {
-        this.judul();
+        this.title();
         System.out.println("===================================================");
         System.out.println("=            Akar Persamaan Non Linier            =");
         System.out.println("===================================================");
@@ -87,13 +111,21 @@ public class Menu
         System.out.println("= 5. Metode Scant                                 =");
         System.out.println("= 6. Kembali                                      =");
         System.out.println("===================================================");
-        System.out.print("Pilih Menu = ");
-        process.menu.nonlinier(input.nextInt());
+        
+        while(true) {
+        	try {
+        		System.out.print("= Pilih Menu : ");
+                process.menu.nonlinier(input.nextInt());
+            } catch (java.util.InputMismatchException ex) {
+            	help.getErrorMessage();
+                input.nextLine();
+            }
+        }
     }
     
     public void interpolasi()
     {
-        this.judul();
+        this.title();
         System.out.println("===================================================");
         System.out.println("=                    Interpolasi                  =");
         System.out.println("===================================================");
@@ -101,13 +133,21 @@ public class Menu
         System.out.println("= 2. Polinomial Newton                            =");
         System.out.println("= 3. Kembali                                      =");
         System.out.println("===================================================");
-        System.out.print("Pilih Menu = ");
-        process.menu.interpolasi(input.nextInt());
+        
+        while(true) {
+        	try {
+        		System.out.print("= Pilih Menu : ");
+                process.menu.interpolasi(input.nextInt());
+            } catch (java.util.InputMismatchException ex) {
+            	help.getErrorMessage();
+                input.nextLine();
+            }
+        }
     }
     
     public void turunan()
     {
-    	this.judul();
+    	this.title();
         System.out.println("===================================================");
         System.out.println("=                  Turunan Numerik                =");
         System.out.println("===================================================");
@@ -116,13 +156,21 @@ public class Menu
         System.out.println("= 3. Formula Terpusat Order O(h4)                 =");
         System.out.println("= 4. Kembali                                      =");
         System.out.println("===================================================");
-        System.out.print("Pilih Menu = ");
-        process.menu.turunan(input.nextInt());
+        
+        while(true) {
+        	try {
+        		System.out.print("= Pilih Menu : ");
+                process.menu.turunan(input.nextInt());
+            } catch (java.util.InputMismatchException ex) {
+            	help.getErrorMessage();
+                input.nextLine();
+            }
+        }
     }
     
     public void integral()
     {
-    	this.judul();
+    	this.title();
         System.out.println("===================================================");
         System.out.println("=                 Integral Numerik                =");
         System.out.println("===================================================");
@@ -131,11 +179,19 @@ public class Menu
         System.out.println("= 3. Metode Romberg                               =");
         System.out.println("= 4. Kembali                                      =");
         System.out.println("===================================================");
-        System.out.print("Pilih Menu = ");
-        process.menu.integral(input.nextInt());
+        
+        while(true) {
+        	try {
+        		System.out.print("= Pilih Menu : ");
+                process.menu.integral(input.nextInt());
+            } catch (java.util.InputMismatchException ex) {
+            	help.getErrorMessage();
+                input.nextLine();
+            }
+        }
     }
 	
-	public Util help = new Util();
+	public Utilities help = new Utilities();
 	public Scanner input = new Scanner(System.in);
 	public static Controller process = new Controller();
 }

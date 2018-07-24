@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 
 import controller.Controller;
-import util.Util;
+import util.Utilities;
 
 public class Interpolasi
 {
@@ -27,22 +27,13 @@ public class Interpolasi
         System.out.println("===================================================");
         System.out.println("=               Pendekatan Lagrange               =");
         System.out.println("===================================================");
-        System.out.print("= Masukkan nilai x0 : ");
-		nilaiX[0] = input.nextDouble();
-		System.out.print("= Masukkan nilai y0 : ");
-		nilaiY[0] = input.nextDouble();
-		System.out.print("= Masukkan nilai x1 : ");
-		nilaiX[1] = input.nextDouble();
-		System.out.print("= Masukkan nilai y1 : ");
-		nilaiY[1] = input.nextDouble();
-		System.out.print("= Masukkan nilai x2 : ");
-		nilaiX[2] = input.nextDouble();
-		System.out.print("= Masukkan nilai y2 : ");
-		nilaiY[2] = input.nextDouble();
-		System.out.print("= Masukkan nilai x3 : ");
-		nilaiX[3] = input.nextDouble();
-		System.out.print("= Masukkan nilai y3 : ");
-		nilaiY[3] = input.nextDouble();
+        
+        for (int i = 0; i < 4; i++) {
+        	System.out.print("= Masukkan Nilai x" + i + " : ");
+        	nilaiX[i] = input.nextDouble();
+        	System.out.print("= Masukkan Nilai y" + i + " : ");
+        	nilaiY[i] = input.nextDouble();
+        }
 		
 		System.out.println("===================================================");
 		System.out.println("Nilai x dan y yang diketahui : ");
@@ -83,7 +74,12 @@ public class Interpolasi
 		System.out.print("= Masukkan Nilai x4 : ");
 		double e = input.nextDouble();
 		
-		double fa = process.interpolasi.fx_polinomialNewton(a), fb = process.interpolasi.fx_polinomialNewton(b), fc = process.interpolasi.fx_polinomialNewton(c), fd = process.interpolasi.fx_polinomialNewton(d), fe = process.interpolasi.fx_polinomialNewton(e), f45;
+		double fa = process.interpolasi.fx_polinomialNewton(a);
+		double fb = process.interpolasi.fx_polinomialNewton(b);
+		double fc = process.interpolasi.fx_polinomialNewton(c);
+		double fd = process.interpolasi.fx_polinomialNewton(d);
+		double fe = process.interpolasi.fx_polinomialNewton(e);
+		double f45;
 		
 		f45 = process.interpolasi.fx_polinomialNewton(4.5);
 		System.out.println();
@@ -127,7 +123,7 @@ public class Interpolasi
         views.menu.turunan();
 	}
 	
-	public Util help = new Util();
+	public Utilities help = new Utilities();
 	public Scanner input = new Scanner(System.in);
 	public static Views views = new Views();
 	public static Controller process = new Controller();

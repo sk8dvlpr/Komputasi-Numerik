@@ -2,7 +2,7 @@ package util;
 
 import java.io.IOException;
 
-public class Util
+public class Utilities
 {
 	public void getClearConsole() 
 	{
@@ -29,7 +29,7 @@ public class Util
 	public void getErrorMessage()
     {
         this.getClearConsole();
-        System.out.println("Maaf Input Yang Anda Masukkan Salah!!!");
+        System.out.println("\nMaaf Input Yang Anda Masukkan Salah!!!");
         this.getHoldConsole();
     }
 }

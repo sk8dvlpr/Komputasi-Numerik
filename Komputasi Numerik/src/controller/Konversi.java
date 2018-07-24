@@ -7,8 +7,7 @@ public class Konversi
 		int valueNew = Integer.parseInt(value);
 		int result = 0, decimal = 0, i = 0;
 		
-		while(valueNew != 0)
-        {
+		while(valueNew != 0) {
             decimal += (valueNew % 10) * Math.pow(2, i);
             ++i;
             valueNew /= 10;
@@ -16,8 +15,7 @@ public class Konversi
 
         i = 1;
 
-        while (decimal != 0)
-        {
+        while (decimal != 0) {
             result += (decimal % 8) * i;
             decimal /= 8;
             i *= 10;
@@ -30,8 +28,8 @@ public class Konversi
 	{
 		int valueNew = Integer.parseInt(value);
 		int result = 0, i = 0;
-        while(valueNew != 0)
-        {
+        
+		while(valueNew != 0) {
             result += ((valueNew%10) * Math.pow(2,i));
             valueNew = valueNew / 10;
             i++;
@@ -40,14 +38,13 @@ public class Konversi
         return String.valueOf(result);
 	}
 	
-	public void getBinarytoHex(String value)
+	public void getBinarytoHex(String value) 
 	{
 		int valueNew = Integer.parseInt(value);
 		int[] hex = new int[1000];
 		int i = 1, j = 0, temp, decimal = 0;
 		
-		while (valueNew > 0)
-		{
+		while (valueNew > 0) {
 			temp = valueNew % 2;
 			decimal = decimal + temp * i;
 			i = i * 2;
@@ -55,15 +52,14 @@ public class Konversi
 		}
 		
 		i = 0;
-		while (decimal != 0)
-		{
+		
+		while (decimal != 0) {
 			hex[i] = decimal % 16;
 			decimal = decimal / 16;
 			i++;
 		}
 		
-		for (j = i - 1; j >= 0; j--)
-		{
+		for (j = i - 1; j >= 0; j--) {
 			if (hex[j] > 9)
 				System.out.print((char)(hex[j] + 55));
 			else
@@ -79,8 +75,7 @@ public class Konversi
 		int decimal = 0, i = 0;
         long result = 0;
 
-        while(valueNew != 0)
-        {
+        while(valueNew != 0) {
             decimal += (valueNew % 10) * Math.pow(8, i);
             ++i;
             valueNew/=10;
@@ -88,8 +83,7 @@ public class Konversi
 
         i = 1;
 
-        while (decimal != 0)
-        {
+        while (decimal != 0) {
             result += (decimal % 2) * i;
             decimal /= 2;
             i *= 10;
@@ -114,8 +108,7 @@ public class Konversi
 	{
 		int temp;
 
-        if (value <= 1) 
-        {
+        if (value <= 1) {
             System.out.print(value);
             return;
         }
@@ -234,32 +227,26 @@ public class Konversi
 		for (int i = 0; i < 10; i++) {
 			a[i] = bilanganBaru[i] * 16;
 			int temp = (int) a[i];
-				if (temp == 10) {
+			
+				if (temp == 10)
 					secResult = secResult + "" + "A";
-				}
-				else if (temp == 11) {
+				else if (temp == 11)
 					secResult = secResult + "" + "B";
-				}
-				else if (temp == 12) {
+				else if (temp == 12)
 					secResult = secResult + "" + "C";
-				}
-				else if (temp == 13) {
+				else if (temp == 13)
 					secResult = secResult + "" + "D";
-				}
-				else if (temp == 14) {
+				else if (temp == 14)
 					secResult = secResult + "" + "E";
-				}
-				else if (temp == 15) {
+				else if (temp == 15) 
 					secResult = secResult + "" + "F";
-				}
-				else {
+				else 
 					secResult = secResult + "" + temp;
-				}
 				
 				bilanganBaru[i+1] = a[i] - (int) a[i];
-				if (temp == 0) {
+				
+				if (temp == 0)
 					break;
-				}
 		}
 		
 		System.out.println(Integer.toHexString(firstResult)+"."+secResult);
@@ -280,24 +267,24 @@ public class Konversi
 		
 		for (int i = 1; i < left.length(); i++) {
 			temp = this.fracDectoBin(left.substring(i, i+1));
+			
 			if (temp.length() == 1) 
 				firstResult = firstResult + "00" + temp;
 			else if (temp.length() == 2)
 				firstResult = firstResult + "0" + temp;
-			else {
+			else 
 				firstResult = firstResult + "" + temp;
-			}
 		}
 		
 		for (int i = 0; i < right.length(); i++) {
 			temp = this.fracDectoBin(right.substring(i, i+1));
+			
 			if (temp.length() == 1) 
 				secResult = secResult + "00" + temp;
 			else if (temp.length() == 2)
 				secResult = secResult + "0" + temp;
-			else {
+			else 
 				secResult = secResult + "" + temp;
-			}
 		}
 		
 		result = result + "" + firstResult + "." + secResult;
@@ -330,8 +317,7 @@ public class Konversi
         
         value = value - a;
         
-        for (int i = 0; i < precision; ++i)
-        {
+        for (int i = 0; i < precision; ++i) {
             value *= 2;
             int fracBit = (int) value;
             value -= fracBit;
@@ -350,8 +336,7 @@ public class Konversi
         
         value = value - a;
         
-        for (int i = 0; i < precision; ++i)
-        {
+        for (int i = 0; i < precision; ++i) {
             value *= 8;
             int fracBit = (int) value;
             value -= fracBit;
@@ -396,15 +381,15 @@ public class Konversi
 		
 		for (int i = 0; i < right.length(); i++) {
 			temp = this.HextoBinary(right.substring(i, i+1));
+			
 			if (temp.length() == 1) 
 				secResult = secResult + "000" + temp;
 			else if (temp.length() == 2)
 				secResult = secResult + "00" + temp;
 			else if (temp.length() == 3)
 				secResult = secResult + "0" + temp;
-			else {
+			else 
 				secResult = secResult + "" + temp;
-			}
 		}
 		
 		result = result + "" + firstResult + "." + secResult;
@@ -424,7 +409,8 @@ public class Konversi
 		return String.valueOf(this.getFractionBinarytoOctal(valueNew));
 	}
 	
-	public String getFractionHextoDecimal(String value) {
+	public String getFractionHextoDecimal(String value)
+	{
 		String valueNew = this.getFractionHextoBinary(value);
 		return String.valueOf(this.getFractionBinarytoDecimal(valueNew));
 	}
